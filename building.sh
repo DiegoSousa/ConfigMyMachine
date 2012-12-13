@@ -1,6 +1,6 @@
 #!/bin/sh
 
-#Antes de rodar o script, copia-lo para home, verificar se a maquina está conectada a internet, montar a partição Arquivo
+#Before running the script, copy it to home, check if the machine is connected to internet, mount the partition Archive
 
 # Useful commands:
 # echo "senha" | sudo -S ./a.sh
