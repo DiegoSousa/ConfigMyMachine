@@ -54,6 +54,9 @@ sudo -S apt-get install -y --force-yes git-core git-svn< $passSudo
 echo "installing ssh"
 sudo -S apt-get install -y --force-yes ssh< $passSudo
 
+echo "installing ssh"
+sudo -S apt-get install -y --force-yes curl< $passSudo
+
 echo "installing axel"
 sudo -S apt-get install -y --force-yes axel < $passSudo
 
@@ -65,6 +68,9 @@ sudo -S apt-get install -y --force-yes samba < $passSudo
 
 echo "installing wireshark"
 sudo -S apt-get install -y --force-yes wireshark < $passSudo
+
+echo "installing nmap"
+sudo -S apt-get install -y --force-yes nmap < $passSudo
 
 echo "installing rar"
 sudo -S apt-get install -y --force-yes rar < $passSudo
