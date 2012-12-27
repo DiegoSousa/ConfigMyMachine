@@ -7,7 +7,11 @@
 # sudo -S su -c "passwd root" < passwd
 
 # Remember:
-# add extensions ; brighten the terminal ; add plugins in eclipse (sheelEd - https://downloads.sourceforge.net/project/shelled/shelled/ShellEd%202.0.2/update e maven http://download.eclipse.org/technology/m2e/releases)
+# add extensions ; brighten the terminal ; add plugins in eclipse:
+#(sheelEd - https://downloads.sourceforge.net/project/shelled/shelled/ShellEd%202.0.2/update and 
+# Maven http://download.eclipse.org/technology/m2e/releases and
+# create key ssh
+# Heroku https://eclipse-plugin.herokuapp.com/install - doubts? -> https://devcenter.heroku.com/articles/getting-started-with-heroku-eclipse)
 
 nameUser=diego
 homeUser=/home/diego
@@ -47,18 +51,25 @@ sudo -S apt-get install -y --force-yes gnome-shell < $passSudo
 
 echo "installing vlc"
 sudo -S apt-get install -y --force-yes vlc < $passSudo
+	
+echo "installing apache2"
+sudo -S apt-get install -y --force-yes apache2 < $passSudo
+	
+echo "installing Unetbootin"
+sudo -S apt-get install -y --force-yes unetbootin < $passSudo
 
 echo "installing git"
 sudo -S apt-get install -y --force-yes git-core git-svn< $passSudo
 
 echo "installing ssh"
 sudo -S apt-get install -y --force-yes ssh< $passSudo
+ssh-keygen -b 1024 -t rsa -P "" -f ~/.ssh/id_rsa
 
-echo "installing ssh"
+echo "installing curl"
 sudo -S apt-get install -y --force-yes curl< $passSudo
 
 echo "installing axel"
-sudo -S apt-get install -y --force-yes axel < $passSudo
+sudo -S apt-get install -y --force-yes axel < $passSudo			
 
 echo "installing vim"
 sudo -S apt-get install -y --force-yes vim < $passSudo
@@ -91,6 +102,8 @@ echo "=============================================="
 echo "Downloading application using wget and axel"
 echo ""
 
+wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
+
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_i386.deb
 
 axel -n 50 http://dlc.sun.com.edgesuite.net/virtualbox/4.2.4/virtualbox-4.2_4.2.4-81684~Ubuntu~quantal_i386.deb
@@ -98,6 +111,7 @@ axel -n 50 http://dlc.sun.com.edgesuite.net/virtualbox/4.2.4/virtualbox-4.2_4.2.
 axel -n 50 http://dlc.sun.com.edgesuite.net/virtualbox/4.2.4/Oracle_VM_VirtualBox_Extension_Pack-4.2.4-81684.vbox-extpack
 
 wget -O - "https://www.dropbox.com/download?plat=lnx.x86" | tar xzf -
+./.dropbox-dist/dropbox 
 
 else
 	echo "Installing applications folder download"	
