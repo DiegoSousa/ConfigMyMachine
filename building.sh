@@ -58,6 +58,9 @@ sudo -S apt-get install -y --force-yes apache2 < $passSudo
 echo "installing Unetbootin"
 sudo -S apt-get install -y --force-yes unetbootin < $passSudo
 
+echo "installing Wine"
+sudo -S apt-get install -y --force-yes wine1.4 < $passSudo
+
 echo "installing git"
 sudo -S apt-get install -y --force-yes git-core git-svn< $passSudo
 
