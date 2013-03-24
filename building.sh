@@ -51,6 +51,9 @@ sudo -S apt-get install -y --force-yes gnome-shell < $passSudo
 
 echo "installing vlc"
 sudo -S apt-get install -y --force-yes vlc < $passSudo
+
+echo "installing blueman"
+sudo -S apt-get install -y --force-yes blueman < $passSudo
 	
 echo "installing apache2"
 sudo -S apt-get install -y --force-yes apache2 < $passSudo
@@ -70,6 +73,9 @@ ssh-keygen -b 1024 -t rsa -P "" -f ~/.ssh/id_rsa
 
 echo "installing curl"
 sudo -S apt-get install -y --force-yes curl< $passSudo
+
+echo "installing pptview"
+sudo -S apt-get install -y --force-yes pptview< $passSudo
 
 echo "installing axel"
 sudo -S apt-get install -y --force-yes axel < $passSudo			
